@@ -1,16 +1,31 @@
-# This is a sample Python script.
+##Jim McMahon
+##DAEN 500 Final
+##Problem 2
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+#this is the class that will manipulate the input string
+class StringManipulator:
+    def __init__(self, currString = ''):
+        self.currString = currString
 
+    #method for getting user string input
+    def getString(self):
+        print('Enter a string')
+        user_input = input()
+        myString = str(user_input)
+        self.currString = myString
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    #method for making input all caps
+    def printString(self):
+        self.currString = self.currString.upper()
+        print(self.currString)
 
-
-# Press the green button in the gutter to run the script.
+#methods are repeated below to test all cases mentioned in problem statement
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    newManipulator = StringManipulator()
+    newManipulator.getString()
+    newManipulator.printString()
+    newManipulator.getString()
+    newManipulator.printString()
+    newManipulator.getString()
+    newManipulator.printString()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
